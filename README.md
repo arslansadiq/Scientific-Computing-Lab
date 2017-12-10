@@ -5,3 +5,6 @@ The lab course gives an application oriented introduction to the following topic
 - solvers for large, sparse systems of linear equations 
 - adaptivity and adaptively refined discretisation grids 
 - applications from fluid dynamics and heat transfer
+
+### Author:
+[Muhammad Arslan Ansari](www.linkedin.com/in/marslan1).
