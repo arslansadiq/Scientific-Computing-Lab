@@ -1,4 +1,4 @@
-# TUM Practical Course on Scientific-Computing
+# Practical Course on Scientific-Computing (Technical University of Munich)
 The lab course gives an application oriented introduction to the following topics: 
 - explicit and implicit time stepping methods for ordinary differential equations 
 - numerical methods for stationary and instationary partial differential equations 
