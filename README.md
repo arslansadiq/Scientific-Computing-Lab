@@ -7,4 +7,4 @@ The lab course gives an application oriented introduction to the following topic
 - applications from fluid dynamics and heat transfer
 
 ### Author:
-[Muhammad Arslan Ansari](www.linkedin.com/in/marslan1).
+[Muhammad Arslan Ansari](https://www.linkedin.com/in/marslan1/)
