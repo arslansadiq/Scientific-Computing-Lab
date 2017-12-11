@@ -133,6 +133,7 @@ Stability_Table = array2table(stability_table , 'RowNames' , {'Time Step','Expli
 disp('Following are the pointers for Stability table');
 disp('0 -> Unstability');
 disp('1 -> Stability');
+
 %%%%%%%%%%%          Explicit Euler Method's Definition        %%%%%%%%%%%%%
 
 function approx_value = explicit_euler(dt , time_end , y0)
@@ -168,7 +169,7 @@ end
 
 %%%%%%%%%%%          2nd Order Adam Moulton Method's Definition        %%%%%%%%%%%%%
 
-function approx_value = adam_moulton(dt , time_end , y0, a)
+function approx_value = adam_moulton(dt , time_end , y0)
 approx_value =  zeros(1 , (time_end./dt)+1);
 approx_value(1) = y0;
 for i = 1:(size(approx_value , 2)-1)
