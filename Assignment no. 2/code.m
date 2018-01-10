@@ -114,7 +114,7 @@ for i = 1:(size(approx_value , 2)-1)
 end
 end
 
-   %%%%%%%%%%%          Heun Method's Definition        %%%%%%%%%%%%%
+   %%%%%%%%%%%          Runge Kutta Method's Definition        %%%%%%%%%%%%%
 function approx_value = Runge_Kutta(dt , time_end , y0)
 approx_value = zeros(1 , (time_end./dt)+1);
 approx_value(1) = y0;
