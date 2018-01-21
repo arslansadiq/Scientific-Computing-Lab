@@ -10,7 +10,7 @@ N = nx*ny;
 n=0;
 error = zeros(nx, ny);
 while residual>10^-6 && n < 10000  %arbitrary number of iteration to get out
-                                   %of the loop in unstable 
+                                   %of the loop in unstable case
     %Iteration for Gauss Seidel 
     % Equation for Implicit Euler:
     % Xout = X + dt*Tt    Tt is out heat equation with time n+1, X is at n
