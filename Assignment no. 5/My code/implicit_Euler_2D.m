@@ -12,9 +12,10 @@ error = zeros(nx, ny);
 while residual>10^-6 && n < 10000
     %Iteration for Gauss Seidel 
     % Equation for Implicit Euler:
-    % Xout = X + dt*Xout
+    % Xout = X + dt*Tt    Tt is out heat equation with time n+1, X is at n
     for i = 2:nx+1
         for j = 2:ny+1
+        % by rearranging the implicit euler equation we get this
             Xout(i, j) = (X(i,j))/c + (a/c)*(Xout(i+1, j) + Xout(i-1, j))+...
                     (b/c)*(Xout(i, j+1) + Xout(i, j-1));
         end
