@@ -24,6 +24,9 @@ while residual>10^-6 && n < 10000
     % possible
     for i = 2:nx+1
         for j=2:ny+1
+            % Moving every term in the heat equation by making it implicit
+            % on the R.H.S we get the following and it should be close to
+            % zeros
             error(i-1, j-1) = X(i, j) + (a)*(Xout(i+1, j) + Xout(i-1, j))+...
                 (b)*(Xout(i, j+1) + Xout(i, j-1)) - (c)*(Xout(i, j)); 
         end
