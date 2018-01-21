@@ -9,7 +9,7 @@ end_time = [1/8, 2/8, 3/8, 4/8];
 %%%%%% Approximation of Instationary Heat Equation by Explicit Euler %%%%%%
 
 for i = 1:length(end_time)
-    figure('name', strcat('Solution of instationary 2D-heat eqauation by Explicit Euler at time: ', num2str(end_time(i))));
+   fig = figure('name', strcat('Solution of instationary 2D-heat eqauation by Explicit Euler at time: ', num2str(end_time(i))));
     for j = 1:length(N_X)
         hx = 1/(N_X(j)+1);
         hy = 1/(N_Y(j)+1);
@@ -41,11 +41,12 @@ for i = 1:length(end_time)
             end  
         end  % end time step loop
     end % end grid size loop
+    saveas(fig, strcat('Plot for Explicit Euler at time = ', num2str(end_time(i)), '.jpg'));
 end  % end time loop
 
 %%%%%% Approximation of Instationary Heat Equation by Implicit Euler %%%%%%
 
-figure('name', 'Gauss Seidel approsimation to Heat Equation by Implicit Euler at step size 1/64')
+fig2 = figure('name', 'Gauss Seidel approsimation to Heat Equation by Implicit Euler at step size 1/64');
 for i = 1:length(end_time)
     dt = 1/64;
     for j = 1:length(N_X)
@@ -67,10 +68,11 @@ for i = 1:length(end_time)
         [x_axis, y_axis] = meshgrid(0:hx:1,0:hy:1);
         surf(x_axis, y_axis, T);
         if i==1
-           title(strcat('time = 1/', num2str(1/end_time(j))));
+           title(strcat('time = ', num2str(j), '/8'));
         end
         if j==1
            zlabel(strcat('Nx=Ny = ',num2str(N_X(j))));
         end
     end % end of grid size loop
 end % end of max time loop
+saveas(fig2, strcat('Implicit Eluer Plot with dt = ', num2str(dt), '.jpg'));
