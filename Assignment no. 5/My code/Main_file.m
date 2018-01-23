@@ -77,3 +77,16 @@ for i = 1:length(N_X)
     end % end of grid size loop
 end % end of max time loop
 saveas(fig2, strcat('Implicit Eluer Plot with dt = ', num2str(dt), '.jpg'));
+% dt <= h2/4
+stability_array = zeros(4,7);
+for i = 1:7
+    for j = 1:4
+        dt = step_size(1,i);
+        h = 1/(N_X(1,j)+1);
+        if (dt <= (h^2)/4)
+            stability_array(j,i) = 1;
+        end
+    end
+end
+
+T = array2table(stability_array,'VariableNames',{'dt64','dt128','dt256','dt512','dt1024','dt2048','dt4096'},'RowNames',{'N3','N7','N15','N32'})
