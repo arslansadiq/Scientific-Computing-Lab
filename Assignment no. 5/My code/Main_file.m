@@ -83,7 +83,7 @@ for i = 1:7             %Computing the table for stability criteria
     for j = 1:4
         dt = step_size(1,i);
         h = 1/(N_X(1,j)+1);
-        if (dt <= (h^2)/4)
+        if (dt <= (h^2)/4)               %condition computed by Von-neumann Stability analysis
             stability_array(j,i) = 1;
         end
     end
